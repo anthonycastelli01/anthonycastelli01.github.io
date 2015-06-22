@@ -22,21 +22,41 @@ header a {
 }
 
 
-section {
+.main-map {
   position: absolute;
   margin: 10px;
   width: 100%;
   max-width: 1300px;
 }
-section ul {
+.main-map ul {
   list-style-type: none;
 }
 
+article {
+  margin: 10px;
+}
+article h1 {
+  font-size: 2em;
+  margin: 5px;
+}
+article h2 {
+  font-size: 1.5em;
+  margin: 5px;
+  margin-left: 15px;
+}
+article h4 {
+  font-size: .75em;
+  margin: 5px;
+  margin-left: 15px;
+}
+article p {
+  text-indent: 1em;
+}
 
 footer {
   position: absolute;
   background-color: blue;
-  width: 100%;
+  width: 95%;
   height: 2em;
   bottom: 0px;
 }
