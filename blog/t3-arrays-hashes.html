@@ -20,28 +20,64 @@
 
     <main>
       <article>
-        <h1>Arrays and Hashes</h1>
-        <h2>Ruby Storage Structures</h2>
-        <h4>June 29, 2015</h4>
+        <div id="title">
+          <h1>Arrays and Hashes</h1>
+          <h2>Basic Ruby Storage Structures</h2>
+          <h4>June 29, 2015</h4>
+        </div>
 
         <p>This week in phase0 we learned about the basics of Ruby and how to do basic variable manipulation. In our second to last challenge, we learned about Ruby arrays and hashes, special types of variables used to store many values at once. Arrays and hashes are similar in that they use a key:value pair to get values in and out of storage. The main difference being that arrays use a numbering system for keys and hashes use any type of object as a key.</p>
 
-        <h3>Array</h3>
+        <h3>Arrays</h3>
 
-        <p>The structure of arrays is such that the data is stored as values which are referenced to by number values. </p>
+        <p>The structure of arrays is such that the data is stored as values which are referenced to by number values. These values start at zero, so if you have a number of values 'n', the order would be "0, 1, 2, ..., n-1". This is known as 'zero indexed', which is a common thing in programming languages.</p>
 
-        <img src=""></img>
+        <figure>
+          <img src="../imgs/array.png" alt="Array Visualization"></img>
+          <figcaption><b>Figure 1:</b> An array can be visualized as a container full of numbered boxes.</figcaption>
+        </figure>
 
-        <p></p>
+        <p>An array can be visualized as a container with smaller compartments inside, each of which has a (positive including zero) number on the outside. These boxes contain values that need to be stored, so in the analogy this would be like looking at the pile of containers for the one numbered with the number you were looking for, and picking it out to mess with the contents. Usually these boxes are considered to be sorted in numerical order, so it's not quite the same as the analogy, but these values aren't necessarily stored like that in practice.</p>
+
+        <p>When an array is initialized, it defults to having all of its values set to the 'nil' value. This is Ruby's way of saying that nothing is stored at these locations, so in effect the array is empty. Each value is set this way from the beginning unless it is initialized in an atypical way. Once the array is used to store values, these 'nil' placeholders are replaced with data. Data stored inside arrays can be of any object type, including other arrays! The usual way to initialize an empty array is like so:</p>
+
+        <pre class="ruby">myArray = []</pre>
+
+        <p>Square brackets are used in Ruby to access both arrays and hashes, but in order to represent an empty array two empty brackets are used. In order to access a value at a specific index, the name of the array followed by two brackets with the index inside woudl be used, as below:</p>
+
+        <pre class="ruby">myArray[0] = "Hello"</pre>
+
+        <p>In this example, the value of the array myArray at index 0 is changed to the string "Hello". Values can be changed in a more automated fashion using an iterative loop, where a value is inserted into the brackets that is changed during every iteration. This can be seen below:</p>
+
+        <pre class="ruby">
+for i in 0..10
+  myArray[i] = "This is the value at index #{i}"
+end</pre>
+
+        <p>This would set the first 10 index values of the array named myArray to a helpful note about what was stored at the corresponding location for the index.</p>
 
         <h3>Hashes</h3>
 
-        <p></p>
+        <p>Hashes are similar in practice to arrays, but are different in what can be used for the keys used to find the internal values. The terminology is also a little different than arrays, where an array was considered to be ordered and had an index value to find the data, hashes use 'keys' to find data, which is also known as a 'value'. Thus, storage in a hash is based on key:value pairs, where a key can be a number of different things. Thus, the biggest difference between a hash and an array is that while data in an array is accessed with numbers, hash values can be accessed with strings or other objects as well!</p>
 
-        <img src=""></img>
+        <p>An empty has is also defined differently than an array. Where arrays used square brackets, hashes use {curly brackets} to define an empty value. Thus, to define an array in Ruby, one would type in:<p>
 
-        <p></p>
+        <pre class="ruby">myHash = {}</pre>
 
+        <p>The hash will still give null values for any undefined values, the only difference being that a test like myHash["one"] will give a null value instead of only numerical values. A hash can still accept numerical values for keys though, so if you felt that array keys being only integers was limiting, hashes are probably for you!</p>
+
+        <p>Iterators can still be used in a hash, with the only change being that you will need to come up with a way of generating the correct values unless a special loop is used. For example, </p>
+
+        <pre class="ruby">
+for i in 1..10
+  hash["loc" + i.to_s] = "Location #{i}"
+end</pre>
+
+        <p>This code will give ten values of strings like "loc1" and "loc2" values like "Location 1" and "Location 2". This is nice, but in order to get back at these values we can no longer use a simple numerical iteration loop, and have to use a more creative generator for strings that correspond to these locations. However, hashes have special functions that make their keys and values easier to access. For example:</p>
+
+        <pre class="ruby">hash.each{|key, value| puts value}</pre>
+
+        <p>This will go through all of the keys and print out the values associated with them. However, the keys may not be sorted in order so don't depend on that!</p>
       </article>
     </main>
 
