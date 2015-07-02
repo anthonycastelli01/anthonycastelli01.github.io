@@ -18,19 +18,42 @@ header h1 {
   margin-bottom: 20px;
   margin-left: 35%;
 }
-header ul {
-  background-color: #D3D3D3;
-  width: 70%;
-  height: 30px;
-  margin-left: 35%;
+header nav a {
+  font-size: 1em;
+  font-family: Arial;
+  font-weight: bold;
 }
-header li {
-  display: inline;
-  width: 25%;
-  padding-left: 20px;
-  padding-right: 20px;
+header nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0px;
 }
-header a {
+header nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 30px 10px 30px;
+  font-size: 18px;
+}
+header nav li.active {
+  background: #00688b;
+}
+header nav li {
+  background: #98cce6;
+}
+header nav :link {
+  color: #000;
+  text-decoration: none;
+}
+header nav :visited {
+  color: #000;
+  text-decoration: none;
+}
+header nav li.active :link {
+  color: #FFF;
+  text-decoration: none;
+}
+header nav li.active :visited {
+  color: #FFF;
   text-decoration: none;
 }
 

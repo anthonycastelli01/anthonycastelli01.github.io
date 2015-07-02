@@ -10,22 +10,48 @@ header h1 {
   width: 90%;
   margin-bottom: 20px;
 }
-header ul {
-  background-color: #D3D3D3;
-  margin: 0px;
+header nav {
+  font-size: 120%;
   width: 90%;
-  height: 30px;
 }
-header li {
-  display: inline;
-  width: 25%;
-  padding-left: 20px;
-  padding-right: 20px;
+header nav a {
+  font-size: 1em;
+  font-family: Arial;
+  font-weight: bold;
 }
-header a {
+header nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0px;
+}
+header nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 30px 10px 30px;
+  font-size: 18px;
+}
+header nav li.active {
+  background: #00688b;
+}
+header nav li {
+  background: #98cce6;
+}
+header nav :link {
+  color: #000;
   text-decoration: none;
 }
-
+header nav :visited {
+  color: #000;
+  text-decoration: none;
+}
+header nav li.active :link {
+  color: #FFF;
+  text-decoration: none;
+}
+header nav li.active :visited {
+  color: #FFF;
+  text-decoration: none;
+}
 
 .main-map {
   position: absolute;
@@ -41,6 +67,9 @@ article {
   display: block;
   max-width: 800px;
   margin: 10px;
+}
+article #title {
+  border-bottom: 1px solid #EEE;
 }
 article h1 {
   font-size: 2em;
