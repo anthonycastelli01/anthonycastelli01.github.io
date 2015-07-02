@@ -18,6 +18,11 @@ header h1 {
   margin-bottom: 20px;
   margin-left: 35%;
 }
+header nav {
+  font-size: 120%;
+  width: 90%;
+  margin-left: 35%;
+}
 header nav a {
   font-size: 1em;
   font-family: Arial;
