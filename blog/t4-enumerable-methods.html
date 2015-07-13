@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Phase 0 Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
+          <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <div id="title">
+          <h1>Enumerable Ruby Methods</h1>
+          <h2>Or: How .map Works</h2>
+          <h4>July 11, 2015</h4>
+        </div>
+
+        <p>This week in phase0, we moved on from the basic Ruby methods and structures we learned and began using them in applications. A main focus of what we had to learn was the Ruby enumerable class, which allows easy traversal of basic data structures in Ruby. For example, instead of writing a loop ever time you want to go over an array, you can use an enumerable to do that for you in a more compact form. While enumerables are used in a number of Ruby methods, the one I find to be most useful is map.</p>
+
+        <h3>.map</h3>
+
+        <p>Ruby's map function, at its most basic, is for modifying elements inside of a data structure. The most common use this week was for iterating through an array and changing the contained data based on some kind of calculated function. For example, we might have been given this array:</p>
+
+        <pre>[1,2,3,4,5]</pre>
+
+        <p>We can use the map method to change these values to twice their amount, or even higher:</p>
+
+        <pre>[1,2,3,4,5].map(|i| i * 2) => [2,4,6,8,10]
+[1,2,3,4,5].map(|i| i * 5) => [5,10,15,20,25]</pre>
+
+        <p>Other functions can be put inside the block as well, like this example which gives us the powers of two of each element:</p>
+
+        <pre>[1,2,3,4,5].map(|i| i * i) => [1,4,9,16,25]</pre>
+
+        <p>This can come in handy for a number of different applications, some of which we touched on this week, like modifying an array of strings and integers to have different sets of numbers in them.</p>
+
+        <h3>.map!</h3>
+
+        <p>Map also has a destructive version, which can be used on stored or more permanent arrays, like so:</p>
+
+        <pre>array = [1,2,3,4,5]
+array.map!{|i| i * 2}
+puts array
+
+=> [2,4,6,8,10]
+</pre>
+
+      </article>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </blog>
+</html>
