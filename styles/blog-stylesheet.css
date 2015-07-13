@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+body {
+  background-color: #F4F4F4;
+}
+
 header {
   display: block;
 }
@@ -97,7 +101,7 @@ figcaption {
   Why is the width not working properly?
 */
 code, pre {
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
   width: 75%;
   max-width: 600px;
   margin: 10px;
