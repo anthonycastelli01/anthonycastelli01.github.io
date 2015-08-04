@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Phase 0 Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
+          <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
+          <li><a href="https://anthonycastelli01.github.io/projects/index.html">Projects</a></li>
+          <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <div id="title">
+          <h1>Ruby Classes</h1>
+          <h2>Modeling Real-world Objects with Code</h2>
+          <h4>July 19, 2015</h4>
+        </div>
+
+        <h3>Ruby Classes</h3>
+        <p>A class in Ruby is a piece of code that organizes functions and values into one entity that can be recreated over and over again. This entity is known as an object, and creating an object is known as "instantiating" it - as in making an instance of it. Objects are very useful in a number of different ways - not only can they simplifty large amounts of code into small packages, but they can also be nested inside each other to form complex objects that imitate everyday things. A simple example is of an ATM - an object that not only stores information (how much money you have), but allows a user to change those values in a protected way (with the correct PIN).</p>
+
+        <h3>Example Object</h3>
+        <p>An ATM, in the simplest sense for an individual, is a box that you put money into so that it's safe and can be accessed later when you need it. In order to make this simple model work, we can make a Ruby class to hold some exmaple information. The class is defined as follows:</p>
+
+        <pre>
+class ATM
+  def initialize(starter_money)
+    @balance = starter_money
+  end
+end
+        </pre>
+
+        <p>In this case, you would instantiate an ATM object with the code: <pre>machine = ATM.new(400)</pre> Thus, the ATM would be started with $400 in it for the current user. The only problem is, there's no way to get the money out or check how much is in there! What if you want to put more in? The simplest way is probably using attr methods: <pre>attr_accessor :balance</pre> This allows direct access to the stored balance, and can be called like this:</p>
+
+        <pre>
+machine.balance
+=> 400
+machine.balance = 300
+machine.balance
+=> 300
+        </pre>
+
+        <p>You can probably see the problem with this though. Anyone can just go in and change the amount stored! Nothing is in place to keep someone from saying they have a million dollars, or for an enemy to change it to zero! An effective way to change the stored information securely is with accessor methods that include safety measures:</p>
+        <pre>
+class ATM
+  def initialize(starter_money, pin)
+    @balance = starter_money
+    @PIN = pin.to_s
+  end
+
+  def withdraw(amount)
+    p "What is your PIN?"
+    pin = gets.chomp
+    if (pin == @PIN)
+      @balance -= amount
+      return amount
+    else
+      p "That is incorrect. Please try again later."
+    end
+  end
+
+  def balance?
+    p "What is your PIN?"
+    pin = gets.chomp
+    if (pin == @PIN)
+      p "Your balance is #{@balance}"
+    else
+      p "That is incorrect. Please try again later."
+    end
+  end
+
+  def add_money(deposit)
+    p "What is your PIN?"
+    pin = gets.chomp
+    if (pin == @PIN)
+      @balance += deposit
+      p "Thank you for your deposit. Have a nice day!"
+    else
+      p "That is incorrect. Please try again later."
+    end
+  end
+end
+        </pre>
+
+        <p>When we remove the attr_accessor portion of the code, these methods keep just anyone from changing the balance and getting into your finances. This is the great thing about objects! You can develop an intuitive system of code storage based on real life things that is easy for people to read and can be set up to be easy to fix too!</p>
+
+      </article>
+    </main>
+  </blog>
+</html>

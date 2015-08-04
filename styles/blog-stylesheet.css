@@ -113,15 +113,3 @@ code, pre {
   line-height: 1.45em;
   border-radius: 3px;
 }
-
-/*
-  What makes this work differently in the index page?
-*/
-footer {
-  position: float;
-  background-color: rgba(0,0,255,.5);
-  width: 100%;
-  height: 2em;
-  bottom: 0;
-  left: 0;
-}
