@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/blog-stylesheet.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Phase 0 Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
+          <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
+          <li><a href="https://anthonycastelli01.github.io/projects/index.html">Projects</a></li>
+          <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <div id="title">
+          <h1>Sorting Algorithms</h1>
+          <h4>August 6, 2015</h4>
+        </div>
+
+        <p>In the past weeks, we have relied pretty heavily on enumerable methods and simple helper functions in both Ruby and Javascript. These methods keep us from having to know exactly what's happening, but allow us to do a lot of great and useful things as long as we understand the documentation pages. However, these methods are holding much more complicated code inside of them that is important to understand. One such set of methods is the sorting methods common to many languages. Underlying the basic idea of "go sort this array" is a series of useful potential algorithms, each of which is uniquely suited for different scenarios. Some of these are described below:</p>
+
+        <h3>Bubble Sort</h3>
+        <p>A common but slow algorithm used for sorting, bubble sort is a method by which an array is parsed through, and for every pair of two that exists, a comparison is done to see if they are in the right order. This is done over and over on the array until there is nothing left to be done. A simple analogy is a box of sand and rocks. If you shake the box, larger pieces are forced upward and smaller pieces move to the bottom until you get a "sorted" box. You can see an example of the algorithm used on numbers from Wikipedia here:</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif"></img>
+        <p>This algorithm, while simple, is also very slow as it takes multiple passes to get a sorted answer. The runtime also increases the larger the dataset is. It not only takes more time to parse through the set, it takes longer to push all of the numbers into thir correct place. Bubble sorting works best on small sets of data that are reasonably sorted beforehand, because the worst case is to start with the largest number at the beginning and having to push it all the way to the end.</p>
+
+        <h3>Quick Sort</h3>
+        <p>Quick sort is another commonly used sorting algorithm, which uses statistical properties of a dataset to sort it. It is more complicated than the bubble sorting algorithm, due to the statistics involved. The algorithm for quick sort is to pick the middle value, and switch the values around so that values lower than the middle point are on one side and values above are on the other. Then, each side of the middle value is sorted by subdividing them into smaller parts and running another quick sort until all the values are in order, and finally working back up the values to check that everything is sorted. This is most easily done with recursion, and an image of what happense can be seen below (also from Wikipedia):</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif">
+        <p>This method is a lot more complicated than the bubble sort, but on average it gives better results. In the worst case, it can perform just as poorly as bubble sorting, but the general rule is that it's faster on sets in general and not only small datasets.</p>
+
+        <p>In common practice, these sorting algorithms are combined together in a larger script. Tests are done on the array to check for things like length, average value, and other statistical factors that lead to a more efficient calculation. So, when methods like Array#sort! are used, it's really an overall script that analyzed the array and sorts based on the best choice for the situation.</p>
+
+      </article>
+    </main>
+  </blog>
+</html>
