@@ -1,46 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../styles/blog-stylesheet.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Blog Post</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-    <header>
-      <h1>Phase 0 Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
-          <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
-          <li><a href="https://anthonycastelli01.github.io/projects/index.html">Projects</a></li>
-          <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <article>
-        <div id="title">
-          <h1>Classes vs IDs</h1>
-          <h2>How to choose a selector</h2>
-          <h4>June 21, 2015</h4>
-        </div>
+    <div class="navbar-wrapper">
+      <div class="container">
 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Phase 0 Blog</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
+                <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://anthonycastelli01.github.io/projects/index.html">Main Project Page</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="projects/electronics.html">Electronics</a></li>
+                    <li><a href="#">Dev Bootcamp</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Classes vs IDs</h1>
+        <h2>How to choose a selector</h2>
+        <h4>June 21, 2015</h4>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-8">
         <p>This week, we learned about the basics of writing websites using HTML and CSS. HTML (HyperText Markup Language) is the basic framework that all websites use to show content, and CSS (Cascading Style Sheet) is the way that all the information is formatted or "styled" such that it looks nice on the page. In order for CSS to work, however, it has to be able to select the parts of the page being styled. This is done through the use of "selectors" that relate the page element to a set of attributes given in the CSS file. These selectors come in a few forms, but there are two very important ones: IDs and classes.</p>
 
         <p>IDs are used when a style is only going ot be used in one place. The idea is that, like an ID for a person, you only have one and that one ID is supposed to only reference one individual thing. In the HTML, an ID is designated with a tag attribute of id="name", where "name" is the name of the ID you plan to use. Once this is put into a document, the CSS accesses this tag through the use of the # character, as in:
-          <pre>
-            #selector {
-              attribute: value;
-            }
-          </pre>
-        This would apply the <i>value</i> to an <i>attribute</i> for the tag found with an ID equal to <i>selector</i>. An example of IDs used in my code fo rthis week can be seen here:
+        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0066BB; font-weight: bold">#selector</span> {
+  attribute<span style="color: #333333">:</span> value;
+}
+</pre></div>
+
+        This would apply the <i>value</i> to an <i>attribute</i> for the tag found with an ID equal to <i>selector</i>. An example of IDs used in my code for this week can be seen here:
         <img src="../imgs/id-code.png" alt="id use" width="200px">
         I used an ID here because there is only one banner on my site, and there should only ever be one.</p>
 
         <p>While classes are similar to IDs, their use is somewhat different. Classes are supposed to be used when a lare portion of a site needs to be formatted the same way. For example, in my code from this week: <img src="../imgs/class-code.png" alt="class image" width="200px" float="left"> I used a class here because I knew that the main section of my page would all need to be of the same format, despite being made up of many tags. This main-map consisted of many separate parts, and having to put in a bunch of smaller selectors would be messy, so I used a class to keep it all together nicely and minimize the extra code. It's also important to note that while the syntax of a class selection in CSS is similar, it doesn't use a # character, but a . instead.</p>
+      </div>
 
-      </article>
-    </main>
-  </blog>
+      <hr class="col-md-8">
+
+      <footer class="col-md-8">
+        <p>&copy; 2015 Anthony Castelli.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
