@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../styles/blog-stylesheet.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>Blog Post</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-    <header>
-      <h1>Phase 0 Blog</h1>
-      <nav>
-        <ul>
-          <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
-          <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
-          <li><a href="https://anthonycastelli01.github.io/projects/index.html">Projects</a></li>
-          <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <article>
-        <div id="title">
-          <h1>Thinking Style</h1>
-          <h2>My Phase0 Thinking Style</h2>
-          <h4>June 29, 2015</h4>
-        </div>
+    <div class="navbar-wrapper">
+      <div class="container">
 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Phase 0 Blog</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="https://anthonycastelli01.github.io/">Home</a></li>
+                <li class="active"><a href="https://anthonycastelli01.github.io/blog">Blog</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://anthonycastelli01.github.io/projects/index.html">Main Project Page</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="projects/electronics.html">Electronics</a></li>
+                    <li><a href="#">Dev Bootcamp</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://anthonycastelli01.github.io/about.html">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Thinking Style</h1>
+        <h2>My Phase 0 Thinking Style</h2>
+        <h4>June 29, 2015</h4>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-8">
         <p>During the first portion of DBC Phase 0, before any learning had been done, I had to take an online test to find out my <a href="http://web.cortland.edu/andersmd/learning/gregorc.htm">Gregorc Thinking Style</a>. After taking the test, I found that I had tied for both Concrete and Abstract Sequential thinking. This suggests, among other things, that I prefer to do things logically and with some order, as well as getting all the facts before making a decision. On top of this, I prefer dealing with structured challenges where others can be interacted with to get toward the final goal. I found that this really resonated with me in terms of things I had done in the past. I do really prefer to work with other people on things, and having all the available information before having to do something. However, I also resonated with Gregorc's predictions that I dislike working in groups and not having enough time to thoroughly explore a subject before doing something with it. This could prove a challenge when it comes time to actually work at DBC in person, as most of our work sems like it will involve groups. I think as long as a large portion of it is working in the same was as the pair challenges have been though, I should be fine. I really don't mind small groups and working one on one with a pair is pretty ideal. My biggest struggle so far has really been time. Between taking down my old apartment, moving across the country, and setting up a new living space it's been really tough to get the time to really thoroughly get to know the weekly concepts. I'd like to have time to do some of the optional things but it just hasn't been happening. This doesn't really directly relate to my learning style, btu I think my best course of action would be to take as much of my newfound free time to go through the material as I can.</p>
 
         <p>We also talked about growth vs. fixed mindsets, and the effects of having these mindsets on our work. I found through quizzes and readings that I have more of a growth mindset, however I can be very harsh on myself. I really do believe that it is possible for anyone to change the amount of intellengence an develop talent in areas, but when it comes to myself I am my own worst critic, and that can definitely hamper my ability to learn and grow. In order to overcome this, I need to go a little easier on myself and admit that I might need improvement, but that as long as I am learning and improving myself it will be fine.</p>
+      </div>
 
-      </article>
-    </main>
+      <hr class="col-md-8">
+
+      <footer class="col-md-8">
+        <p>&copy; 2015 Anthony Castelli.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>
-
 </html>
